@@ -1,0 +1,43 @@
+.navbar {
+  background-color: #222;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  color: #61dafb;
+}
+
+.categorias {
+  display: flex;
+  gap: 25px;
+}
+
+.cart-widget {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cart-widget span {
+  margin-left: 5px;
+}

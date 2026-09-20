@@ -1,13 +1,21 @@
-import "./App.css"
+import Navbar from "./components/Navbar/Navbar";
+import Header from "./components/Header/Header";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import Footer from "./components/Footer/Footer";
 
-const App = () => {
-
+function App() {
   return (
     <>
-      <h1>E-commerce</h1>
-      <h2>Mi primer e-commerce</h2>
+      <Navbar />
+      <Header />
+
+      <main className="main-content">
+        <ItemListContainer greeting="¡Bienvenidos a nuestra tienda!" />
+      </main>
+
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
