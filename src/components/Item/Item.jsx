@@ -3,9 +3,9 @@ import "./Item.css";
 function Item({ product }) {
   return (
     <div className="item-card">
-      <img src={product.image} alt={product.title} />
+      <img src={product.img} alt={product.name} />
 
-      <h3>{product.title}</h3>
+      <h3>{product.name}</h3>
 
       <p>{product.description}</p>
 

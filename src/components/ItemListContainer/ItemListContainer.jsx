@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
-import { getProducts } from "../Promesas/Promesas";
+import { getProducts } from "../../asyncmock";
 
 const ItemListContainer = ({ greeting }) => {
   const [items, setItems] = useState([]);

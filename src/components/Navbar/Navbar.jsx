@@ -11,9 +11,9 @@ const Navbar = () => {
 
         <div className="categorias">
           <a href="#">Notebooks</a>
-          <a href="#">Celulares</a>
+          <a href="#">Tecnología</a>
           <a href="#">Periféricos</a>
-          <a href="#">Componentes</a>
+          <a href="#">Audio</a>
         </div>
 
         <a href="#">Contacto</a>
