@@ -1,20 +1,48 @@
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Footer from "./components/Footer/Footer";
+import NotFound from "./components/NotFound/NotFound";
+
 
 function App() {
   return (
     <>
       <Navbar />
 
-      <Header />
-
       <main className="main-content">
-        <ItemListContainer greeting="¡Bienvenidos a nuestra tienda!" />
+        <Routes>
 
-        <ItemDetailContainer />
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <ItemListContainer greeting="¡Bienvenidos a nuestra tienda!" />
+              </>
+            }
+          />
+
+          <Route
+            path="/category/:id"
+            element={
+              <ItemListContainer greeting="Productos por categoría" />
+            }
+          />
+
+          <Route
+            path="/item/:id"
+            element={<ItemDetailContainer />}
+          />
+
+          <Route
+            path="*"
+            element={<NotFound />}
+          />
+
+        </Routes>
       </main>
 
       <Footer />
