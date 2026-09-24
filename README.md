@@ -1,16 +1,68 @@
-# React + Vite
+# 🛒 Mi E-commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto de e-commerce desarrollado con **React** y **Vite** como parte del curso de Desarrollo Full Stack de Coderhouse.
 
-Currently, two official plugins are available:
+La aplicación permite visualizar un catálogo de productos, consultar el detalle de cada producto, utilizar un buscador y gestionar productos mediante un carrito de compras.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Tecnologías utilizadas
 
-## React Compiler
+* React
+* Vite
+* JavaScript
+* CSS
+* React Router
+* HTML5
+* Git y GitHub
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📦 Funcionalidades
 
-## Expanding the ESLint configuration
+* 🏠 Página principal con catálogo de productos.
+* 🔎 Buscador de productos.
+* 🧭 Navegación entre las diferentes secciones mediante React Router.
+* 🛍️ Visualización del listado de productos.
+* 📄 Vista de detalle de cada producto.
+* 🔢 Selector de cantidad mediante `ItemCount`.
+* 🛒 Carrito de compras.
+* 📱 Diseño adaptable a diferentes tamaños de pantalla.
+* 📩 Formulario de contacto.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📁 Estructura del proyecto
+
+```text
+src/
+├── components/
+│   ├── Navbar/
+│   ├── Header/
+│   ├── Footer/
+│   ├── Item/
+│   ├── ItemList/
+│   ├── ItemCount/
+│   ├── ItemDetail/
+│   └── ItemListContainer/
+│
+├── App.jsx
+├── App.css
+└── main.jsx
+```
+
+## ⚙️ Instalación
+
+Para ejecutar el proyecto localmente:
+
+```bash
+git clone https://github.com/Ivory14code/e-commerce.git
+```
+
+Luego ingresar a la carpeta:
+
+```bash
+cd e-commerce
+```
+
+Instalar las dependencias:
+
+```bash
+npm install
+```
+
+Iniciar el servidor de desar
