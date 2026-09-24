@@ -41,3 +41,12 @@
 .cart-widget span {
   margin-left: 5px;
 }
+
+.cart-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cart-link:hover {
+  text-decoration: none;
+}

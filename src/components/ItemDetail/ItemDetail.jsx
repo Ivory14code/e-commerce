@@ -1,10 +1,17 @@
 import ItemCount from "../ItemCount/ItemCount";
+import { useCart } from "../../context/CartContext";
+
 import "./ItemDetail.css";
 
 const ItemDetail = ({ producto }) => {
+  const { addItem } = useCart();
+
+  const handleAdd = (cantidad) => {
+    addItem(producto, cantidad);
+  };
+
   return (
     <div className="item-detail">
-
       <div className="item-detail-image">
         <img src={producto.img} alt={producto.name} />
       </div>
@@ -28,10 +35,11 @@ const ItemDetail = ({ producto }) => {
           Stock disponible: {producto.stock}
         </p>
 
-        <ItemCount stock={producto.stock} />
-
+        <ItemCount
+          stock={producto.stock}
+          onAdd={handleAdd}
+        />
       </div>
-
     </div>
   );
 };

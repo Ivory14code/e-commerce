@@ -1,7 +1,11 @@
+import { useCart } from "../../context/CartContext";
+
 const CartWidget = () => {
+  const { totalItems } = useCart();
+
   return (
     <div className="cart-widget">
-      🛒 <span>0</span>
+      🛒 <span>{totalItems}</span>
     </div>
   );
 };

@@ -21,7 +21,9 @@ const Navbar = () => {
         <NavLink to="/contacto">Contacto</NavLink>
       </div>
 
-      <CartWidget />
+      <NavLink to="/cart" className="cart-link">
+        <CartWidget />
+      </NavLink>
     </nav>
   );
 };
