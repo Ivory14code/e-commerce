@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import { useCart } from "../../context/CartContext";
 
 import "./Cart.css";
@@ -6,16 +7,10 @@ import "./Cart.css";
 const Cart = () => {
   const { cart, removeItem, decreaseItem, clear } = useCart();
 
-  const finalizarCompra = () => {
-    alert("¡Compra realizada con éxito! 🎉");
-    clear();
-  };
-
   if (cart.length === 0) {
     return (
       <div className="cart-empty">
         <h2>Tu carrito está vacío 🛒</h2>
-
         <p>Agregá algunos productos para comenzar tu compra.</p>
 
         <Link to="/" className="cart-back">
@@ -38,7 +33,7 @@ const Cart = () => {
         {cart.map((producto) => (
           <div className="cart-item" key={producto.id}>
             <img
-              src={producto.img}
+              src={producto.image}
               alt={producto.name}
               className="cart-item-image"
             />
@@ -79,12 +74,9 @@ const Cart = () => {
             Vaciar carrito
           </button>
 
-          <button
-            className="cart-finish"
-            onClick={finalizarCompra}
-          >
+          <Link to="/checkout" className="cart-finish">
             Finalizar compra
-          </button>
+          </Link>
         </div>
       </div>
     </div>

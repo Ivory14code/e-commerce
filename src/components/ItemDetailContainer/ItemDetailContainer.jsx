@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getUnProducto } from "../../asyncmock";
+
+import { doc, getDoc } from "firebase/firestore";
+
+import { db } from "../../firebase/config";
+
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {
@@ -9,15 +13,27 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    setProducto(null);
+    const cargarProducto = async () => {
+      try {
+        setProducto(null);
 
-    getUnProducto(Number(id))
-      .then((producto) => {
-        setProducto(producto);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+        const productoRef = doc(db, "products", id);
+        const resultado = await getDoc(productoRef);
+
+        if (resultado.exists()) {
+          setProducto({
+            id: resultado.id,
+            ...resultado.data(),
+          });
+        } else {
+          console.error("Producto no encontrado");
+        }
+      } catch (error) {
+        console.error("Error al cargar el producto:", error);
+      }
+    };
+
+    cargarProducto();
   }, [id]);
 
   if (!producto) {

@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import NotFound from "./components/NotFound/NotFound";
 import Contact from "./components/Contact/Contact";
 import Cart from "./components/Cart/Cart";
+import Checkout from "./components/Checkout/Checkout";
 
 
 function App() {
@@ -52,6 +53,11 @@ function App() {
           <Route
             path="/cart"
             element={<Cart />}
+          />
+
+          <Route
+            path="/checkout"
+            element={<Checkout />} 
           />
 
         </Routes>
