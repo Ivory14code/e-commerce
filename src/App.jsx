@@ -8,6 +8,9 @@ import NotFound from "./components/NotFound/NotFound";
 import Contact from "./components/Contact/Contact";
 import Cart from "./components/Cart/Cart";
 import Checkout from "./components/Checkout/Checkout";
+import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
 
 function App() {
@@ -57,7 +60,21 @@ function App() {
 
           <Route
             path="/checkout"
-            element={<Checkout />} 
+            element={
+              <ProtectedRoute>
+                <Checkout />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/login"
+            element={<Login />}
+          />
+
+          <Route
+            path="/registro"
+            element={<Register />}
           />
 
         </Routes>
